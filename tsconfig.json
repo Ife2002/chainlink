@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es2020",                  /* Specify the target ECMAScript version */
+      "module": "commonjs",                /* Specify module code generation */
+      "strict": true,                      /* Enable all strict type-checking options */
+      "esModuleInterop": true,              /* Enable/disable emitting use of `import * as ns from "mod"` for namespace imports */
+      "skipLibCheck": true,                /* Skip type checking of declaration files */
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",          /* Specify module resolution strategy */
+      "resolveJsonModule": true,           /* Enable importing of JSON modules */
+      "jsx": "react",                      /* Specify JSX code generation */
+      "declaration": true,                 /* Generate .d.ts files */
+      "strictPropertyInitialization": false /* Enable strict checking of property initialization */
+    },
+    "exclude": [
+      "node_modules"                      /* Specify the files to exclude from the compilation */
+    ]
+  }
+  
