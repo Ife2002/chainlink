@@ -9,11 +9,24 @@ async function fetchHTML(url: any) {
   function extractData(html: any) {
     const $ = cheerio.load(html);
   
-    // Use jQuery-like selectors to extract data
+    // Use jQuery-like selectors to extract data from div elements
     const title = $('title').text();
-    const links = $('a').map((index, element) => $(element).attr('href')).get();
+    const divData: string[] = [];
+    
+    $('div').each((index, element) => {
+      // Modify the following line based on the structure of your div elements
+      const divText = $(element).text();
+      
+      // You can also extract specific attributes from the div element if needed
+      // const divAttribute = $(element).attr('your-attribute-name');
   
-    return { title, links };
+      divData.push(divText);
+    });
+  
+    return {
+      title,
+      divData,
+    };
   }
    
 
@@ -21,12 +34,12 @@ async function fetchHTML(url: any) {
     try {
       const html = await fetchHTML(url);
       const data = extractData(html);
-      console.log('Scraped Data:', data.title);
+      console.log('Scraped Data:', data);
     } catch (error: any) {
       console.error('Error:', error.message);
     }
   }
   
-  const targetUrl = 'https://polygonscan.com/address/0x00000000000000adc04c56bf30ac9d3c0aaf14dc';
+  const targetUrl = 'https://birdeye.so/token/8c71AvjQeKKeWRe8jtTGG1bJ2WiYXQdbjqFbUfhHgSVk?chain=solana';
   runScraper(targetUrl);
   

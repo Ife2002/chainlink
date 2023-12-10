@@ -1,7 +1,13 @@
 {
   "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@lifi/sdk": "^2.5.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/web3.js": "^1.87.6",
+    "@truffle/hdwallet-provider": "^2.1.15",
     "axios": "^1.6.2",
     "cheerio": "^1.0.0-rc.12",
+    "ethers": "^6.9.0",
     "web3": "^4.2.2"
   }
 }
