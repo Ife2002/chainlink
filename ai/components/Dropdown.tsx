@@ -15,9 +15,9 @@ const DropdownMenu = () => {
   };
 
   return (
-    <div className="relative text-black inline-block m-4">
+    <div className="relative text-black inline-block m-6">
       <button
-        className="bg-gray-300 text-black font-semibold py-2 px-4 rounded inline-flex items-center"
+        className="border-gray-300 border-[1px] text-black font-normal w-[10rem] py-1 px-2 rounded-md inline-flex items-center"
         onClick={handleToggle}
       >
         <span className="mr-1">Menu</span>
@@ -31,16 +31,19 @@ const DropdownMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute mt-2 w-48 bg-white border rounded-lg shadow-lg">
+        <div className="absolute mt-2 w-60 bg-white border rounded-lg shadow-lg">
           <ul>
             <li className="py-2 px-4 cursor-pointer hover:bg-gray-200" onClick={() => handleItemClick('Item 1')}>
               Transaction explainer
             </li>
             <li className="py-2 px-4 cursor-pointer hover:bg-gray-200" onClick={() => handleItemClick('Item 2')}>
-              Item 2
+              Swap tokens
             </li>
             <li className="py-2 px-4 cursor-pointer hover:bg-gray-200" onClick={() => handleItemClick('Item 3')}>
-              Item 3
+              Wallets and domains
+            </li>
+            <li className="py-2 px-4 cursor-pointer hover:bg-gray-200" onClick={() => handleItemClick('Item 3')}>
+              DCA
             </li>
           </ul>
         </div>
